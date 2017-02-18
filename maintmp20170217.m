@@ -116,4 +116,4 @@ plot(wsort,b_huwacb,'-','Color',[0 0.5 0]);
 
 %%
 hsi2d = reshape(hsi,[hdr.samples*hdr.lines,hdr.bands])';
-[Xhuwacb,Z,C] = huwacb_admm2([],hsi2d(active_bands,:),wsort(active_bands),'verbose','yes');
+[Xhuwacb,Z,C] = huwacb_admm2_splitexec([],hsi2d(active_bands,:),wsort(active_bands),'verbose','yes');
